@@ -133,4 +133,22 @@ public class TesKlikButton {
         onView(withId(R.id.output)).check(matches(withText("15")));
     }
 
+    @Test
+    public void tesKlikButtonPersen(){
+        onView(withId(R.id.button9)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("1")));
+    }
+    @Test
+    public void tesKlikButtonPlusMinus(){
+        onView(withId(R.id.button9)).perform(click());
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("7")));
+    }
+    
 }
